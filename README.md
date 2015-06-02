@@ -4,7 +4,7 @@ A jQuery plugin that add two directionnal scroll to table content.
   - verticaly fixed thead
   - horizontaly fixed tbody columns
 
-Demo.
+#### Demo: https://jsfiddle.net/leonsaysHi/3p5L228b/
 
 ### Requirement :
 
