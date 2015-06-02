@@ -1,0 +1,49 @@
+// We use this to do clear floats
+@mixin clearfix {
+  &:before, &:after { content: " "; display: table; }
+  &:after { clear: both; }
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	     moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.twst {	
+	.thead, .tbody {
+		position: relative;
+		@include clearfix;
+	}
+	.trow {
+		@include clearfix;
+	}
+	.tcell, &__scroll {
+		overflow:hidden;
+		float:left;
+	}
+	@for $i from 1 through 10 {
+		.tcell--#{$i}0 {
+		    width: $i * 10%;
+		}
+	}
+	// specs
+	&__autoscroll {
+		overflow:hidden;
+		float:left;
+	}
+	.thead {
+		.twst__autoscroll {
+			margin-right:-1px;
+		}
+	}
+	&__scroll {
+		position: absolute;
+		top:0;right:0;
+		overflow:auto;
+		&__view {
+			position:absolute;z-index:-1;
+			top:0;right:0;left:0;bottom:0;
+		}
+	}
+}
+@import "twst-decoration";

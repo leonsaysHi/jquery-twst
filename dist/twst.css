@@ -1,0 +1,77 @@
+* {
+  -webkit-box-sizing: border-box;
+  moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.twst .thead, .twst .tbody {
+  position: relative; }
+  .twst .thead:before, .twst .thead:after, .twst .tbody:before, .twst .tbody:after {
+    content: " ";
+    display: table; }
+  .twst .thead:after, .twst .tbody:after {
+    clear: both; }
+.twst .trow:before, .twst .trow:after {
+  content: " ";
+  display: table; }
+.twst .trow:after {
+  clear: both; }
+.twst .tcell, .twst__scroll {
+  overflow: hidden;
+  float: left; }
+.twst .tcell--10 {
+  width: 10%; }
+.twst .tcell--20 {
+  width: 20%; }
+.twst .tcell--30 {
+  width: 30%; }
+.twst .tcell--40 {
+  width: 40%; }
+.twst .tcell--50 {
+  width: 50%; }
+.twst .tcell--60 {
+  width: 60%; }
+.twst .tcell--70 {
+  width: 70%; }
+.twst .tcell--80 {
+  width: 80%; }
+.twst .tcell--90 {
+  width: 90%; }
+.twst .tcell--100 {
+  width: 100%; }
+.twst__autoscroll {
+  overflow: hidden;
+  float: left; }
+.twst .thead .twst__autoscroll {
+  margin-right: -1px; }
+.twst__scroll {
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: auto; }
+  .twst__scroll__view {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0; }
+
+.twst__autoscroll {
+  background-color: rgba(255, 255, 100, 0.1); }
+.twst__scroll {
+  background-color: rgba(255, 100, 100, 0.1); }
+.twst .trow {
+  border-bottom: solid 1px #c8c8c8; }
+  .twst .trow:before, .twst .trow:after {
+    content: " ";
+    display: table; }
+  .twst .trow:after {
+    clear: both; }
+  .twst .trow:nth-child(even) {
+    background: rgba(0, 0, 0, 0.05); }
+  .twst .trow:nth-child(odd) {
+    background: transparent; }
+.twst .thead .trow {
+  background: rgba(0, 0, 0, 0.2); }
+.twst .tcell {
+  padding: 3px; }

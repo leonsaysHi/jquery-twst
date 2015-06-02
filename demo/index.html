@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Two way scroll table - demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
+    <link rel="Stylesheet" media="screen" href="../dist/twst.css" />
+  </head>
+
+  <body>
+    <div class="twst">
+
+      <div class="thead">
+        <div class="trow">
+          <div class="tcell tcell--10">Table Header 1</div>
+          <div class="tcell tcell--30">Table Header 2</div>
+          <div class="tcell tcell--60 twst__autoscroll">
+            <div class="tcell tcell--10">Table Header 3</div>
+            <div class="tcell tcell--20">Table Header 4</div>
+            <div class="tcell tcell--30">Table Header 5</div>
+            <div class="tcell tcell--10">Table Header 5</div>
+            <div class="tcell tcell--30">Table Header 6</div>
+          </div>
+        </div>
+      </div><!-- /thead -->
+
+      <div class="tbody">
+
+          <div class="trow">
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">This is longer Content Goes Here</div>
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</div>
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</div>
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</div>
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</div>
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</div>
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</div>
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</div>
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</div>
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</div>
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</div>
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</div>
+            <div class="tcell">Content Goes Here</div>
+            <div class="tcell">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</div>
+          </div> 
+
+        </div><!-- /tbody -->
+
+      </div>
+    </div>
+    <script type='text/javascript' src='../bower_components/jquery-2.0.0/jquery.min.js'></script>
+    <script type='text/javascript' src='../src/jquery.twst.js'></script>
+    <script type='text/javascript'>
+      $(function(){
+        $('.twst').twst();
+      })
+    </script>
+  </body>
+</html>
+
