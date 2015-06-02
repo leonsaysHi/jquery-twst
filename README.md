@@ -1,5 +1,5 @@
-# Dillinger
-# Dillinger
+# TwoWayScrollTable (TWST)
+
 A jQuery plugin that add two directionnal scroll to table content.
   - verticaly fixed thead
   - horizontaly fixed tbody columns
