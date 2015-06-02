@@ -1,10 +1,10 @@
-# Dillinger
-# Dillinger
+# TwoWayScrollTable (TWST)
+
 A jQuery plugin that add two directionnal scroll to table content.
   - verticaly fixed thead
   - horizontaly fixed tbody columns
 
-Demo.
+#### Demo : http://jsfiddle.net/leonsaysHi/3p5L228b/
 
 ### Requirement :
 
@@ -26,7 +26,7 @@ Include **jQuery twst**
 
 Include **jQuery Selectric** styles, and change it to your taste by editing as src/_twst-decoration.scss:
 ```html
-<link rel="stylesheet" href="selectric.css">
+<link rel="stylesheet" href="css/twst.css">
 ```
 
 Initialize **jQuery Selectric:**
@@ -44,8 +44,8 @@ $(function(){
 You can pass an options object as the first parameter when you call the plugin. For example:
 ```js
 $('.mytable').twst({
-  	xscroll : 1000, // horizontaly scrolled content width
-	height : 250, // total table height
+  	xscroll : 1000, // horizontaly scrolled content width (pixel)
+	height : 250, // total table height (pixel)
 	theadClass : 'thead', // thead classname
 	tbodyClass : 'tbody', // tbody classname
 	rowClass : 'trow', // row classname
