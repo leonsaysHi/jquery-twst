@@ -9,6 +9,7 @@
     		tbodyClass : 'tbody',
     		rowClass : 'trow',
     		cellClass : 'tcell',
+    		fullwidthcellModifier : '--full',
     		autoScrollClass : 'twst__autoscroll',
     		scrollClass : 'twst__scroll',
     		scrollViewClass : 'twst__scroll__view'
@@ -43,23 +44,39 @@
 				var 
 					$row = $(el),
 					$cells = $row.find('.' + settings.cellClass),
-					$scrollable_row = $('<div/>').addClass(settings.rowClass);
+					$scrollable_row = $('<div/>').addClass(settings.rowClass),
+					$hg = $cells
 				;
-				horizontal_groups.push($cells);				
-				$.each($cells, function(colindex, cell){
-					if (typeof vertical_assoc['c'+colindex] === 'undefined') { 
-						vertical_assoc['c'+colindex] = {
-							$from:$theadcells.eq(colindex),
-							$to:$([])
-						}; 
-					}
-					var $cell = $(cell);
-					vertical_assoc['c'+colindex].$to = vertical_assoc['c'+colindex].$to.add($cell);
-					// move cell to container if needed
-        			if (colindex > lasttheadfixedcellindex) {
-        				$scrollable_row.append($cell);
-        			}
-				});
+				// WHAT KIND OF ROW : 
+				// full width cell
+				if ($cells.first().is('.' + settings.cellClass + settings.fullwidthcellModifier)) {
+					var 
+						$e = $cells.first(),
+						$c = $e.clone().empty()
+					;
+					$scrollable_row.append($c);		
+					$hg = $hg.add($c)
+				}
+				//normal behavior
+				else {
+
+					$.each($cells, function(colindex, cell){
+						if (typeof vertical_assoc['c'+colindex] === 'undefined') { 
+							vertical_assoc['c'+colindex] = {
+								$from:$theadcells.eq(colindex),
+								$to:$([])
+							}; 
+						}
+						var $cell = $(cell);
+						vertical_assoc['c'+colindex].$to = vertical_assoc['c'+colindex].$to.add($cell);
+						// move cell to container if needed
+	        			if (colindex > lasttheadfixedcellindex) {
+	        				$scrollable_row.append($cell);
+	        			}
+					});
+				}
+
+				horizontal_groups.push($hg);
 				$bodyscroll.append($scrollable_row);
 			});
 

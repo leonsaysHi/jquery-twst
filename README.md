@@ -50,6 +50,7 @@ $('.mytable').twst({
 	tbodyClass : 'tbody', // tbody classname
 	rowClass : 'trow', // row classname
 	cellClass : 'tcell', // cell classname
+    fullwidthcellModifier : '--full', // full width cell modifier
 	autoScrollClass : 'twst__autoscroll',
 	scrollClass : 'twst__scroll',
 	scrollViewClass : 'twst__scroll__view'
