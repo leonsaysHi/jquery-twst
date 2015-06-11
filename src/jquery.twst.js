@@ -51,7 +51,7 @@
 				// full width cell
 				if ($cells.first().is('.' + settings.cellClass + settings.fullwidthcellModifier)) {
 					var 
-						$e = $cells.first(),
+						$e = $cells.first().removeClass(settings.cellClass),
 						$c = $e.clone().empty()
 					;
 					$scrollable_row.append($c);		
