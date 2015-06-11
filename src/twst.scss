@@ -21,10 +21,8 @@
 		overflow:hidden;
 		float:left;
 	}
-	@for $i from 1 through 10 {
-		.tcell--#{$i}0 {
-		    width: $i * 10%;
-		}
+	@for $i from 1 through 19 {
+		.tcell--#{100 - $i * 5} { width: (100 - $i * 5) * 1%; }
 	}
 	// specs
 	&__autoscroll {
